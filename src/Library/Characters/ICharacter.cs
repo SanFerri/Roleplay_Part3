@@ -3,6 +3,7 @@ namespace RoleplayGame
 {
     public abstract class ICharacter
     {
+        public string side { get; set; }
         public int vp {get; set;}
         protected int health = 100;
 

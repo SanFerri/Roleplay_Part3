@@ -4,7 +4,6 @@ namespace RoleplayGame
     public class Dwarf: ICharacter
     {
 
-        public string side { get; set; }
         public Dwarf(string name, string side)
         {
             this.vp = 0;

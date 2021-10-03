@@ -4,7 +4,6 @@ namespace RoleplayGame
     public class Assassin: ICharacter
     {
 
-        public string side { get; set; }
         public Assassin(string name, string side)
         {
             this.vp = 3;

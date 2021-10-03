@@ -3,8 +3,6 @@ namespace RoleplayGame
 {
     public class Archer: ICharacter
     {
-
-        public string side { get; set; }
         public Archer(string name, string side)
         {
             this.vp = 0;

@@ -4,7 +4,6 @@ namespace RoleplayGame
     public class Knight: ICharacter
     {
 
-        public string side { get; set; }
         public Knight(string name, string side)
         {
             this.vp = 0;

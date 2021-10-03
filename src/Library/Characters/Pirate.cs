@@ -4,7 +4,6 @@ namespace RoleplayGame
     public class Pirate: ICharacter
     {
 
-        public string side { get; set; }
         public Pirate(string name, string side)
         {
             this.vp = 3;
