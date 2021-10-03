@@ -1,7 +1,13 @@
 namespace RoleplayGame
 {
-    public interface IAttackItem: IItem
+    public class IAttackItem: IItem
     {
-        int AttackValue { get; }
+        public int AttackValue 
+        {
+            get
+            {
+                return 25;
+            } 
+        }
     }
 }

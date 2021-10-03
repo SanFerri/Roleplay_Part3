@@ -1,9 +1,17 @@
+using System.Collections.Generic;
 namespace RoleplayGame
 {
-    public interface IMagicCharacter: ICharacter
+    public class IMagicCharacter: ICharacter
     {
-        void AddItem(IMagicalItem item);
+        private List<IMagicalItem> magicalItems = new List<IMagicalItem>();
+        public void AddItem(IMagicalItem magicitem)
+        {
+            this.magicalItems.Add(magicitem);
+        }
 
-        void RemoveItem(IMagicalItem item);
+        public void RemoveItem(IMagicalItem magicitem)
+        {
+            this.magicalItems.Remove(magicitem);
+        }
     }
 }
