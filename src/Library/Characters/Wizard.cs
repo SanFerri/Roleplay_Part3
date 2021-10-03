@@ -3,9 +3,11 @@ namespace RoleplayGame
 {
     public class Wizard: IMagicCharacter
     {
-        public Wizard(string name)
+        public string side{ get; set; }
+        public Wizard(string name, string side)
         {
             this.Name = name;
+            this.side = side;
             
             this.AddItem(new Staff());
         }

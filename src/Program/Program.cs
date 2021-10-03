@@ -11,10 +11,10 @@ namespace Program
             book.AddSpell(new SpellOne());
             book.AddSpell(new SpellOne());
 
-            Wizard gandalf = new Wizard("Gandalf");
+            IMagicCharacter gandalf = new Wizard("Gandalf", "Hero");
             gandalf.AddItem(book);
 
-            Dwarf gimli = new Dwarf("Gimli");
+            ICharacter gimli = new Dwarf("Gimli", "Hero");
 
             Console.WriteLine($"Gimli has ❤️ {gimli.Health}");
             Console.WriteLine($"Gandalf attacks Gimli with ⚔️ {gandalf.AttackValue}");

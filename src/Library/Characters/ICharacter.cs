@@ -8,7 +8,7 @@ namespace RoleplayGame
         protected List<IItem> items = new List<IItem>();
         public string Name { get; set; }
         
-        public int AttackValue
+        public virtual int AttackValue
         {
             get
             {
@@ -24,7 +24,7 @@ namespace RoleplayGame
             }
         }
 
-        public int DefenseValue
+        public virtual int DefenseValue
         {
             get
             {
