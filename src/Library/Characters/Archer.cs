@@ -3,9 +3,11 @@ namespace RoleplayGame
 {
     public class Archer: ICharacter
     {
-        public string side{ get; set; }
+
+        public string side { get; set; }
         public Archer(string name, string side)
         {
+            this.vp = 0;
             this.Name = name;
             this.side = side;
             this.AddItem(new Bow());

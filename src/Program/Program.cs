@@ -11,21 +11,32 @@ namespace Program
             book.AddSpell(new SpellOne());
             book.AddSpell(new SpellOne());
 
-            IMagicCharacter gandalf = new Wizard("Gandalf", "Hero");
-            gandalf.AddItem(book);
+            IMagicCharacter Gandalf = new Wizard("Gandalf", "Hero");
+            Gandalf.AddItem(book);
+            ICharacter Gimli = new Dwarf("Gimli", "Hero");
+            ICharacter Zelda = new Archer("Zelda", "Hero");
+            ICharacter Saga = new Knight("Saga", "Hero");
 
-            ICharacter gimli = new Dwarf("Gimli", "Hero");
+            IMagicCharacter Overlord = new UnDead("Overlord","Villian");
+            IMagicCharacter BabaYaga = new Witch("BabaYaga", "Villian");
+            ICharacter MaskedMan = new Assassin("MaskedMan", "Villian");
+            ICharacter WhiteBeard = new Pirate("WhiteBeard", "Villian");
 
-            Console.WriteLine($"Gimli has ❤️ {gimli.Health}");
-            Console.WriteLine($"Gandalf attacks Gimli with ⚔️ {gandalf.AttackValue}");
+            Characters characters = new Characters();
 
-            gimli.ReceiveAttack(gandalf.AttackValue);
+            characters.AddCharacter(Gimli);
+            characters.AddCharacter(Gandalf);
+            characters.AddCharacter(Zelda);
+            characters.AddCharacter(Saga);
 
-            Console.WriteLine($"Gimli has ❤️ {gimli.Health}");
+            characters.AddCharacter(Overlord);
+            characters.AddCharacter(BabaYaga);
+            characters.AddCharacter(MaskedMan);
+            characters.AddCharacter(WhiteBeard);
 
-            gimli.Cure();
+            characters.VilliansHeroes();
 
-            Console.WriteLine($"Someone cured Gimli. Gimli now has ❤️ {gimli.Health}");
+            Encounter.DoEncounter(characters);
         }
     }
 }

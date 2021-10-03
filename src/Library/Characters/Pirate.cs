@@ -3,9 +3,11 @@ namespace RoleplayGame
 {
     public class Pirate: ICharacter
     {
-        public string side{ get; set; }
+
+        public string side { get; set; }
         public Pirate(string name, string side)
         {
+            this.vp = 3;
             this.Name = name;
             this.side = side;
             
