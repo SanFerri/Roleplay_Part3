@@ -5,19 +5,38 @@ namespace Test.Library
 {
     public class Tests
     {
-        [Test]
-        public void Test1()
-        {
         public SpellsBook book = new SpellsBook();
-        public book.Spells = new Spell[]{ new Spell() };
 
-        public Wizard gandalf = new Wizard("Gandalf");
-        public gandalf.Staff = new Staff();
-        public gandalf.SpellsBook = book;
+        public IMagicCharacter Gandalf = new Wizard("Gandalf", "Hero");
+        public ICharacter Gimli = new Dwarf("Gimli", "Hero");
+        public ICharacter Zelda = new Archer("Zelda", "Hero");
+        public ICharacter Saga = new Knight("Saga", "Hero");
 
-        public Dwarf gimli = new Dwarf("Gimli");
-        public gimli.Axe = new Axe();
-        public gimli.Helmet = new Helmet();
+        public IMagicCharacter Overlord = new UnDead("Overlord","Villian");
+        public IMagicCharacter BabaYaga = new Witch("BabaYaga", "Villian");
+        public ICharacter MaskedMan = new Assassin("MaskedMan", "Villian");
+        public ICharacter WhiteBeard = new Pirate("WhiteBeard", "Villian");
+
+        public Characters characters = new Characters();
+
+
+        [Test]
+        public CureTest
+        {
+            int expected = 100;
+            Overlord.ReceiveAttack(30);
+            Overlord.Cure();
+            int actual = Overlord.health;
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public TestReceiveAttack
+        {
+            int expected = 70;
+            Overlord.ReceiveAttack(30)
+            int actual = Overlord.health;
+            Assert.AreEqual(expected, actual);
         }
     }
 }
