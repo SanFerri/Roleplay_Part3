@@ -1,6 +1,11 @@
 using System.Collections.Generic;
 namespace RoleplayGame
 {
+    /// <summary>
+    /// Clase sucesora de Character, pero a su vez base de todas las clases de magos, como wizard, witch y UnDead.
+    /// Agregamos los override para asi poder sobre escribir los metodos de attackvalue y defensevalue de Character
+    /// ya que se calculan de distinta forma en los personajes magicos.
+    /// </summary>
     public class IMagicCharacter: ICharacter
     {
         private List<IMagicalItem> magicalItems = new List<IMagicalItem>();

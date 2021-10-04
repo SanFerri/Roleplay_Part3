@@ -1,7 +1,13 @@
 using System.Collections.Generic;
 namespace RoleplayGame
 {
-    public abstract class ICharacter
+    /// <summary>
+    /// Creamos una clase base Character que tendra como clase sucesora todas aquellas clases que no sean MagicCharacters
+    /// de esta forma podemos hacer uso de la reutilizacion, asi no debemos escribir estos metodos o propiedades en cada
+    /// una de dichas clases sucesoras. Es una clase abstracta ya que el calculo de los valores de ataque y defensa
+    /// cambian en la clase sucesora MagicCharacter.
+    /// </summary>
+    public abstract class ICharacter 
     {
         public string side { get; set; }
         public int vp {get; set;}

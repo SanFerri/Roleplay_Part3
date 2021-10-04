@@ -2,6 +2,11 @@ using System.Collections.Generic;
 
 namespace RoleplayGame
 {
+    /// <summary>
+    /// Esta clase se usa como un structurer que contiene los personajes, y luego como es la experta en conocer a los
+    /// personajes tambien va a asignarlos a cada uno a su grupo de indicado.
+    /// Los metodos VilliansHeroes y RemoveDeadCharacters estan en esta clase para cumplir con expert.
+    /// </summary>
     public class Characters
     {
         public List<ICharacter> characters = new List<ICharacter>();
